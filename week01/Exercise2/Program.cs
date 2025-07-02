@@ -34,11 +34,11 @@ class Program
             letter = "F";
         }
 
-        if (onesPlace >= 7)
+        if (onesPlace >= 7 && letter != "A" && letter != "F")
         {
             plusMinus = "+";
         }
-        else if (onesPlace < 3)
+        else if (onesPlace < 3 && letter != "F")
         {
             plusMinus = "-";
         }
