@@ -27,5 +27,8 @@ class Program
 
         double average = numbers.Average();
         Console.WriteLine($"The average is: {average}.");
+
+        int largest = numbers.Max();
+        Console.WriteLine($"The largest number is: {largest}.");
     }
 }
