@@ -24,5 +24,8 @@ class Program
 
         int total = numbers.Sum();
         Console.WriteLine($"The sum is: {total}.");
+
+        double average = numbers.Average();
+        Console.WriteLine($"The average is: {average}.");
     }
 }
