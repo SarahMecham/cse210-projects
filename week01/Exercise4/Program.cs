@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.Transactions;
+using System.Linq;
 
 class Program
 {
@@ -30,5 +31,10 @@ class Program
 
         int largest = numbers.Max();
         Console.WriteLine($"The largest number is: {largest}.");
+
+        var sorted = numbers.OrderBy(number => number);
+        var smallestPositive = numbers.Where(number => number > 0).Min();
+        Console.WriteLine($"The smallest positive number is: {smallestPositive}.");
+        Console.WriteLine($"The sorted list is: \n{String.Join("\n", sorted)}");
     }
 }
