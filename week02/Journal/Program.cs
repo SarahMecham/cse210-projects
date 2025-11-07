@@ -1,3 +1,5 @@
+//To add creativity, I made the program ready to save to a .csv file for tranfer to an Excel sheet.
+//I also added a header if the file is a new file.
 using System;
 
 class Program
@@ -11,6 +13,7 @@ class Program
 
         while (running)
         {
+            Console.WriteLine();
             Console.WriteLine("Please choose from the following options:");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
@@ -32,17 +35,19 @@ class Program
                     break;
 
                 case 3:
-                    Console.WriteLine("Enter the file name: ");
+                    Console.Write("Enter the file name: ");
                     string saveFile = Console.ReadLine();
                     journal.SaveToFile(saveFile);
                     Console.WriteLine("Entry saved!");
                     break;
+
                 case 4:
-                    Console.WriteLine("Enter the file name?");
+                    Console.Write("Enter the file name: ");
                     string loadFile = Console.ReadLine();
                     journal.LoadFromFile(loadFile);
                     Console.WriteLine("File Loaded!");
                     break;
+
                 case 5:
                     running = false;
                     Console.WriteLine("Goodbye!");
@@ -53,7 +58,7 @@ class Program
 
     static int GetUserChoice()
     {
-        Console.WriteLine("What would you like to do? ");
+        Console.Write("What would you like to do? ");
         string input = Console.ReadLine();
 
         int choice;

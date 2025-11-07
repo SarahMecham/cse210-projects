@@ -1,3 +1,4 @@
+using System;
 public class Entry
 {
     public string _date;
@@ -17,6 +18,16 @@ public class Entry
         Console.WriteLine(_promptText);
         _entryText = Console.ReadLine();
     }
+
+    //Constructor for loading only.
+    public Entry(string date, string prompt, string text)
+    {
+        _date = date;
+        _promptText = prompt;
+        _entryText = text;
+    }
+
+    //Display Entries.
     public void Display()
     {
         Console.WriteLine($"Date: {_date}");
@@ -25,8 +36,9 @@ public class Entry
         Console.WriteLine("--------------------------------------------------------");
     }
 
+    //Store strings seperated by a comma for use in a .csv file that can be converted to a spreadsheet.
     public string ToFileFormat()
     {
-        return $"{_date}|{_promptText}|{_entryText}";
+        return $"\"{_date}\",\"{_promptText}\",\"{_entryText}\"";
     }
 }
