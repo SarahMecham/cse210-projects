@@ -1,13 +1,33 @@
 using System;
+using System.Text.Json;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        var reference = new Reference("John", 3, 16);
-        string text = "For God so loved the world, that he gave his only begotten Son,that whosoever believeth in him should not perish, but have everlasting life.";
+        string json = File.ReadAllText("scriptures.json");
+        List<ScriptureData> scriptures = JsonSerializer.Deserialize<List<ScriptureData>>(json);
 
-        var scripture = new Scripture(reference, text);
+        for (int i = 0; i < scriptures.Count; i++)
+        {
+            var s = scriptures[i];
+            Console.WriteLine($"{i + 1}. {s.book} {s.chapter}: {s.verse}" +
+                (s.endVerse.HasValue ? $"-{s.endVerse}" : ""));
+        }
+
+        Console.Write("Enter the number of the scripture you want: ");
+        int choice = int.Parse(Console.ReadLine() ?? "1");
+
+        var selected = scriptures[choice - 1];
+
+        Reference reference;
+
+        if (selected.endVerse.HasValue)
+            reference = new Reference(selected.book, selected.chapter, selected.verse, selected.endVerse.Value);
+        else
+            reference = new Reference(selected.book, selected.chapter, selected.verse);
+
+        var scripture = new Scripture(reference, selected.text);
 
         Console.WriteLine("Welcome to the Scripture Memorizer!");
         Console.WriteLine("-----------------------------------");

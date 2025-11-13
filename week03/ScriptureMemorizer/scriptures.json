@@ -1,0 +1,66 @@
+[
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 16,
+    "endVerse": 17,
+    "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. For God sent not his Son into the world to condemn the world; but that the world through him might be saved."
+  },
+  {
+    "book": "Proverbs",
+    "chapter": 3,
+    "verse": 5,
+    "endVerse": 6,
+    "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."
+  },
+  {
+    "book": "1 Nephi",
+    "chapter": 3,
+    "verse": 7,
+    "text": "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them."
+  },
+  {
+    "book":"Doctrine and Covenants",
+    "chapter": 6,
+    "verse": 36,
+    "text": "Look unto me in every thought; doubt not, fear not."
+  },
+  {
+    "book": "Mosiah",
+    "chapter": 4,
+    "verse": 29,
+    "endVerse": 30,
+    "text": "And finally, I cannot tell you all the things whereby ye may commit sin; for there are divers ways and means, even so many that I cannot number them. But this much I can tell you, that if ye do not watch yourselves, and your thoughts, and your words, and your deeds, and observe the commandments of God, and continue in the faith of what ye have heard concerning the coming of our Lord, even unto the end of your lives, ye must perish. And now, O man, remember, and perish not."
+  },
+  {
+    "book": "Mosiah",
+    "chapter": 26,
+    "verse": 30,
+    "text":"Yea, and as often as my people repent will I forgive them their trespasses against me."
+  },
+  {
+    "book":"Doctrine and Covenants",
+    "chapter": 6,
+    "verse": 23,
+    "text": "Did I not speak peace to your mind concerning the matter? What greater witness can you have than from God?"
+  },
+  {
+    "book":"Philippians",
+    "chapter": 4,
+    "verse": 7,
+    "text": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus."
+  },
+  {
+    "book":"Matthew",
+    "chapter": 5,
+    "verse": 14,
+    "endVerse": 16,
+    "text":"Ye are the light of the world. A city that is set on an hill cannot be hid. Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house. Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."
+  },
+  {
+    "book":"John",
+    "chapter": 15,
+    "verse": 11,
+    "text":"These things have I spoken unto you, that my joy might remain in you, and that your joy might be full."
+  }
+]
