@@ -14,7 +14,7 @@ class Program
         video1.AddComment(new Comment("Hailey", "Such a cute puppy! I want one just like it!"));
         videos.Add(video1);
 
-        //Video 1
+        //Video 2
         Video video2 = new Video("Sourdough Bread Tutoral", "Betty Crocker", 520);
         video2.AddComment(new Comment("Rachel", "So helpful and yummy!"));
         video2.AddComment(new Comment("Judy", "Thank you, I have been trying to make sourdough successfully for years!"));
@@ -22,14 +22,14 @@ class Program
         video2.AddComment(new Comment("John", "Best bread tutorial I've seen!"));
         videos.Add(video2);
 
-        //Video 1
+        //Video 3
         Video video3 = new Video("Cat Video Compilation", "Animal Fun", 300);
         video3.AddComment(new Comment("Sam", "So Cute!"));
         video3.AddComment(new Comment("Jane", "My kids love this!"));
         video3.AddComment(new Comment("Carlos", "LOL"));
         videos.Add(video3);
 
-        //Video 1
+        //Video 4
         Video video4 = new Video("Learn C# in 10 Minutes", "CodeMaster", 600);
         video4.AddComment(new Comment("Eli", "Thanks for the help!"));
         video4.AddComment(new Comment("Aliya", "Can you make a part 2?"));
