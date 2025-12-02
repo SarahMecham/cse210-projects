@@ -22,7 +22,8 @@ public class ReflectingActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
-
+    
+    //This prevents a question from being repeated before all questions have been used during a session.
     private List<string> _shuffledQuestions;
     private int _currentQuestionIndex = 0;
 

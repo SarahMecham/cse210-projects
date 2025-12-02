@@ -1,3 +1,5 @@
+//I added a method to the reflecting activity that prevents a question from being repeated before all questions have been used during a session.
+
 using System;
 
 class Program
