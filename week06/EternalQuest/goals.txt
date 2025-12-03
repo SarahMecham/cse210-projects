@@ -1,0 +1,4 @@
+0
+SimpleGoal|Eat healthy today.|Do not eat sugary treats today.|100|False
+EternalGoal|Read the scriptures daily.|Read 1 chapter from the Book of Mormon each day.|50
+ChecklistGoal|Attend the temple.|Do ordinance work at the temple each week.|5|5|500|0
