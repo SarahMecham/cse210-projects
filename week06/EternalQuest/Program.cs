@@ -1,3 +1,5 @@
+// A method was added to the GoalManager class that shows confetti when a goal is completed.
+
 using System;
 
 class Program

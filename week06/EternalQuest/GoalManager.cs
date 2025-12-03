@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
@@ -149,26 +150,37 @@ public class GoalManager
             }
         }
 
+        if (goal.IsComplete())
+        {
+            PlayConfettiAnimation();
+        }
+
         Console.WriteLine($"You now have {_score} points!\n");
     }
 
     public void SaveGoals()
-    {   
-        Console.WriteLine("What is the name of the file you would like to save to?");
-        string fileName = Console.ReadLine();
+    {
+        Console.Write("What is the filename for the goal file? ");
+        string filename = Console.ReadLine();
 
-        using (StreamWriter writer = new StreamWriter(fileName))
+        bool fileExists = File.Exists(filename);
+
+        using (StreamWriter writer = new StreamWriter(filename, append: true))
         {
+            if (!fileExists)
+            {
             writer.WriteLine(_score);
+            }
 
             foreach (Goal goal in _goals)
             {
                 writer.WriteLine(goal.GetStringRepresentation());
             }
         }
-        
-        Console.WriteLine("Goals Saved!\n");
+
+        Console.WriteLine("Goals saved successfully.\n");
     }
+
 
     public void LoadGoals()
     {
@@ -258,4 +270,24 @@ public class GoalManager
         Console.WriteLine("Goals loaded successfully.\n");
     }
 
+// Method added to show confetti when a goal is completed.
+    private void PlayConfettiAnimation()
+    {
+        Console.Clear();
+        string[] burst =
+        {
+            " 🎉   🎉   🎉 ",
+            "🎉 🎯  GOAL COMPLETE!  🎯 🎉",
+            " 🎉   🎉   🎉 "
+        };
+
+        foreach (string line in burst)
+        {
+            Console.WriteLine(line);
+            Thread.Sleep(300);
+        }
+
+        Thread.Sleep(1000);
+        Console.Clear();
+    }
 }
